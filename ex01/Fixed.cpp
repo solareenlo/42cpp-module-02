@@ -6,11 +6,10 @@
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/26 22:19:27 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/05/27 01:28:04 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/05/27 04:27:33 by tayamamo         ###   ########.fr       */
 /*   Copyright 2021                                                           */
 /* ************************************************************************** */
 
-#include <iomanip>
 #include "Fixed.hpp"
 
 Fixed::Fixed(void) {
