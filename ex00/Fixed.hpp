@@ -6,12 +6,14 @@
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/26 22:15:24 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/05/27 00:01:18 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/05/27 00:06:37 by tayamamo         ###   ########.fr       */
 /*   Copyright 2021                                                           */
 /* ************************************************************************** */
 
 #ifndef EX00_FIXED_HPP_
 #define EX00_FIXED_HPP_
+
+#include <iostream>
 
 class   Fixed {
  private:
