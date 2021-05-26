@@ -1,0 +1,10 @@
+obj
+megaphone
+*.bak
+*.png
+compile_commands.json
+.ccls*
+*.out
+*.hpp.gch
+
+pony
