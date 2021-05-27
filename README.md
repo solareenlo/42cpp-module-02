@@ -1,7 +1,7 @@
 # 42cpp-module-02
 
 ### ex00
-- コピーコンストラクタ
+- [コピーコンストラクタ](https://programming.pc-note.net/cpp/constructor2.html)
 - 演算子のオーバーロード（`=`）
 
 ### ex01
