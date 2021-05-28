@@ -11,7 +11,9 @@
 ### ex01
 - Fixed Point Number
   - [Introduction to Fixed Point Number Representation](https://inst.eecs.berkeley.edu//~cs61c/sp06/handout/fixedpt.html)
-- 演算子のオーバーロード（`<<`）
+- ostream 演算子のオーバーロード（`<<`）
+  - [Stream extraction and insertion](https://en.cppreference.com/w/cpp/language/operators)
+  - [C++演算子オーバーロード大全 Shift](https://qiita.com/rinse_/items/9d87d5cb0dc1e89d005e#shift)
 
 ## References
 ### Coplien form
