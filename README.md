@@ -7,6 +7,7 @@
   - 自分で定義するコピーコンストラクタは，自分自身のインスタンスの参照を引数に受け取るコンストラクタのこと．
   - コピーコンストラクの禁止を行うこともできる．
 - 演算子のオーバーロード（`=`）
+  - [基本クラスを指すポインタは、その派生クラスも指すことができる](http://www.ced.is.utsunomiya-u.ac.jp/lecture/2012/prog/p3/kadai3/virtualfunc2.php)
 
 ### ex01
 - Fixed Point Number
