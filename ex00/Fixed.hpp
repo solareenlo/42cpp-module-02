@@ -6,7 +6,7 @@
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/26 22:15:24 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/06/19 08:10:19 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/06/19 20:20:23 by tayamamo         ###   ########.fr       */
 /*   Copyright 2021                                                           */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@
 class   Fixed {
  public:
     Fixed();
-    Fixed(Fixed const& src);
     ~Fixed();
+    Fixed(Fixed const& src);
     Fixed&  operator=(Fixed const& original);
 
     int     getRawBits(void) const;
