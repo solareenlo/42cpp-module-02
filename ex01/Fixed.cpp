@@ -6,43 +6,35 @@
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/26 22:19:27 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/05/27 04:27:33 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/06/19 08:32:54 by tayamamo         ###   ########.fr       */
 /*   Copyright 2021                                                           */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
 
-Fixed::Fixed(void) {
+Fixed::Fixed() : val_(0) {
     std::cout << "Default constructor called" << std::endl;
-    this->val_ = 0;
 }
 
-Fixed::Fixed(const int val) {
-    this->val_ = val << NUM_OF_FRACTIONAL_BITS_;
-}
+Fixed::Fixed(const int val) : val_(val << NUM_OF_FRACTIONAL_BITS_) {}
 
-Fixed::Fixed(const float val) {
-    this->val_ = roundf(val * (1 << NUM_OF_FRACTIONAL_BITS_));
-}
+Fixed::Fixed(const float val)
+    : val_(roundf(val * (1 << NUM_OF_FRACTIONAL_BITS_))) {}
 
-Fixed::~Fixed(void) {
+Fixed::~Fixed() {
     std::cout << "Destructor called" << std::endl;
 }
 
-Fixed::Fixed(const Fixed& src) {
+Fixed::Fixed(Fixed const& src) {
     std::cout << "Copy constructor called" << std::endl;
-    *this = src;
+    this->operator=(src);
 }
 
-Fixed& Fixed::operator = (const Fixed& original) {
+Fixed&  Fixed::operator=(Fixed const& rhs) {
     std::cout << "Assignation operator called" << std::endl;
-    if (this != &original)
-        this->val_ = original.getRawBits();
+    if (this != &rhs)
+        this->val_ = rhs.getRawBits();
     return (*this);
-}
-
-std::ostream& operator << (std::ostream& ostream, const Fixed& fixed) {
-    return (ostream << fixed.toFloat());
 }
 
 int Fixed::getRawBits(void) const {
@@ -50,7 +42,7 @@ int Fixed::getRawBits(void) const {
     return (this->val_);
 }
 
-void Fixed::setRawBits(int const raw) {
+void    Fixed::setRawBits(int const raw) {
     this->val_ = raw;
 }
 
@@ -60,4 +52,8 @@ float   Fixed::toFloat(void) const {
 
 int Fixed::toInt(void) const {
     return (this->val_ >> NUM_OF_FRACTIONAL_BITS_);
+}
+
+std::ostream&   operator << (std::ostream& ostream, Fixed const& fixed) {
+    return (ostream << fixed.toFloat());
 }
