@@ -1,5 +1,16 @@
 # 42cpp-module-02
 
+### ex01
+- Fixed Point Number
+  - [Introduction to Fixed Point Number Representation](https://inst.eecs.berkeley.edu//~cs61c/sp06/handout/fixedpt.html)
+- ostream 演算子のオーバーロード（`<<`）
+  - [Stream extraction and insertion](https://en.cppreference.com/w/cpp/language/operators)
+  - [C++演算子オーバーロード大全 Shift](https://qiita.com/rinse_/items/9d87d5cb0dc1e89d005e#shift)
+```c++
+float fl = 3.25;
+std::cout << std::bitset<sizeof(float)*CHAR_BIT>(*reinterpret_cast<unsigned int*>(&fl)) << std::endl;
+```
+
 ### ex00
 - [コピーコンストラクタ](https://programming.pc-note.net/cpp/constructor2.html)
   - 「デフォルトコピーコンストラクタ」と「自分で定義するコピーコンストラク」がある．
@@ -8,13 +19,6 @@
   - コピーコンストラクの禁止を行うこともできる．
 - 演算子のオーバーロード（`=`）
   - [基本クラスを指すポインタは、その派生クラスも指すことができる](http://www.ced.is.utsunomiya-u.ac.jp/lecture/2012/prog/p3/kadai3/virtualfunc2.php)
-
-### ex01
-- Fixed Point Number
-  - [Introduction to Fixed Point Number Representation](https://inst.eecs.berkeley.edu//~cs61c/sp06/handout/fixedpt.html)
-- ostream 演算子のオーバーロード（`<<`）
-  - [Stream extraction and insertion](https://en.cppreference.com/w/cpp/language/operators)
-  - [C++演算子オーバーロード大全 Shift](https://qiita.com/rinse_/items/9d87d5cb0dc1e89d005e#shift)
 
 ## References
 ### Coplien form
