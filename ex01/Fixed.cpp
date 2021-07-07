@@ -6,7 +6,7 @@
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/26 22:19:27 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/06/19 08:32:54 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/07/08 03:53:09 by tayamamo         ###   ########.fr       */
 /*   Copyright 2021                                                           */
 /* ************************************************************************** */
 
@@ -16,10 +16,14 @@ Fixed::Fixed() : val_(0) {
     std::cout << "Default constructor called" << std::endl;
 }
 
-Fixed::Fixed(const int val) : val_(val << NUM_OF_FRACTIONAL_BITS_) {}
+Fixed::Fixed(const int val) : val_(val << NUM_OF_FRACTIONAL_BITS_) {
+    std::cout << "Int constructor called" << std::endl;
+}
 
-Fixed::Fixed(const float val)
-    : val_(roundf(val * (1 << NUM_OF_FRACTIONAL_BITS_))) {}
+Fixed::Fixed(const float val) :
+    val_(roundf(val * (1 << NUM_OF_FRACTIONAL_BITS_))) {
+    std::cout << "Float constructor called" << std::endl;
+}
 
 Fixed::~Fixed() {
     std::cout << "Destructor called" << std::endl;
@@ -38,7 +42,6 @@ Fixed&  Fixed::operator=(Fixed const& rhs) {
 }
 
 int Fixed::getRawBits(void) const {
-    std::cout << "getRawBits member function called" << std::endl;
     return (this->val_);
 }
 

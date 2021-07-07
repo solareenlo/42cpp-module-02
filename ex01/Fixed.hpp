@@ -6,7 +6,7 @@
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/26 22:15:24 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/06/19 08:29:37 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/07/08 03:44:39 by tayamamo         ###   ########.fr       */
 /*   Copyright 2021                                                           */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class   Fixed {
     Fixed();
     ~Fixed();
     Fixed(Fixed const& src);
-    Fixed&  operator=(Fixed const& original);
+    Fixed&  operator=(Fixed const& rhs);
     explicit Fixed(const int val);
     explicit Fixed(const float val);
 
