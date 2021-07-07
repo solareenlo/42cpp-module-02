@@ -6,7 +6,7 @@
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/26 22:15:24 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/06/19 20:20:23 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/07/08 03:35:45 by tayamamo         ###   ########.fr       */
 /*   Copyright 2021                                                           */
 /* ************************************************************************** */
 
@@ -20,13 +20,13 @@ class   Fixed {
     Fixed();
     ~Fixed();
     Fixed(Fixed const& src);
-    Fixed&  operator=(Fixed const& original);
+    Fixed&  operator=(Fixed const& rhs);
 
     int     getRawBits(void) const;
     void    setRawBits(int const raw);
 
  private:
-    int                 fixed_point_val_;
+    int                 val_;
     static const int    NUM_OF_FRACTIONAL_BITS_ = 8;
 };
 

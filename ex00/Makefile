@@ -5,12 +5,12 @@
 #                                                     +:+ +:+         +:+      #
 #    By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2021/06/26 06:59:10 by tayamamo          #+#    #+#              #
-#    Updated: 2021/06/26 06:59:10 by tayamamo         ###   ########.fr        #
+#    Created: 2021/07/08 03:39:39 by tayamamo          #+#    #+#              #
+#    Updated: 2021/07/08 03:39:59 by tayamamo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-# Makefile for philo_one, updated Sat Jun 26 06:59:10 JST 2021
+# Makefile for C++ Module 02, updated Thu Jul  8 03:39:39 JST 2021
 
 SRC := Fixed.cpp main.cpp
 OBJ := Fixed.o main.o
@@ -78,7 +78,7 @@ source:
 	@echo "#                                                                              #" >> Makefile
 	@echo "# **************************************************************************** #" >> Makefile
 	@echo '' >> Makefile
-	@echo "# Makefile for philo_one, updated `date`" >> Makefile
+	@echo "# Makefile for C++ Module 02 Ex00, updated `date`" >> Makefile
 	@echo '' >> Makefile
 	@echo SRC := `ls *.cpp` >> Makefile
 	@echo OBJ := `ls *.cpp | sed s/cpp$$/o/` >> Makefile
