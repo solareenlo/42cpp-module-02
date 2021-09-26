@@ -1,5 +1,8 @@
 # 42cpp-module-02
 
+### ex02
+- [演算子オーバーロード | Programming Place Plus　C++編【言語解説】　第１９章](https://programming-place.net/ppp/contents/cpp/language/019.html#conversion_op)
+
 ### ex01
 - Fixed Point Number
   - [Introduction to Fixed Point Number Representation](https://inst.eecs.berkeley.edu//~cs61c/sp06/handout/fixedpt.html)
