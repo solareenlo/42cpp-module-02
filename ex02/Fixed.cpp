@@ -6,7 +6,7 @@
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/26 22:19:27 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/09/28 19:24:59 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/09/28 19:40:26 by tayamamo         ###   ########.fr       */
 /*   Copyright 2021                                                           */ /* ************************************************************************** */
 
 #include "Fixed.hpp"
@@ -57,14 +57,14 @@ Fixed& Fixed::operator--() {
 
 const Fixed Fixed::operator++(int) {
     Fixed res = *this;
-    ++res.val_;
-    return *this;
+    val_++;
+    return res;
 }
 
 const Fixed Fixed::operator--(int) {
     Fixed res = *this;
-    --res.val_;
-    return *this;
+    val_--;
+    return res;
 }
 
 int Fixed::getRawBits(void) const { return val_; }
