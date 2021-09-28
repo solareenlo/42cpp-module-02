@@ -1,6 +1,8 @@
 # 42cpp-module-02
 
 ### ex03
+- [点と三角形の当たり判定( 内外判定 )](http://www.sousakuba.com/Programming/gs_hittest_point_triangle.html)
+- [How to determine if a point is in a 2D triangle? [closed]](https://stackoverflow.com/questions/2049582/how-to-determine-if-a-point-is-in-a-2d-triangle)
 - [const_cast conversion](https://en.cppreference.com/w/cpp/language/const_cast)
 
 ### ex02
