@@ -5,12 +5,12 @@
 #                                                     +:+ +:+         +:+      #
 #    By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2021/07/08 03:49:57 by tayamamo          #+#    #+#              #
-#    Updated: 2021/07/08 04:15:28 by tayamamo         ###   ########.fr        #
+#    Created: 2021/09/29 03:16:20 by tayamamo          #+#    #+#              #
+#    Updated: 2021/09/29 03:16:20 by tayamamo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-# Makefile for C++ Module 02 Ex01, updated Thu Jul  8 03:49:57 JST 2021
+# Makefile for C++ Module 02 Ex02, updated Wed Sep 29 03:16:20 JST 2021
 
 SRC := Fixed.cpp main.cpp
 OBJ := Fixed.o main.o
