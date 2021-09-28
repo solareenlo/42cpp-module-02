@@ -18,11 +18,13 @@ std::cout << std::bitset<sizeof(float)*CHAR_BIT>(*reinterpret_cast<unsigned int*
 
 ### ex00
 - [コピーコンストラクタ](https://programming.pc-note.net/cpp/constructor2.html)
+  - A copy constructor is used to initialize a previously uninitialized object from some other object's data.
   - 「デフォルトコピーコンストラクタ」と「自分で定義するコピーコンストラク」がある．
   - デフォルトコピーコンストラクタは，自分と同じクラスのインスタンスを引数とするコンストラクタで，メンバ変数をすべてコピーしたものが新しく作られる．
   - 自分で定義するコピーコンストラクタは，自分自身のインスタンスの参照を引数に受け取るコンストラクタのこと．
   - コピーコンストラクの禁止を行うこともできる．
 - 演算子のオーバーロード（`=`）
+  - An assignment operator is used to replace the data of a previously initialized object with some other object's data.
   - [基本クラスを指すポインタは、その派生クラスも指すことができる](http://www.ced.is.utsunomiya-u.ac.jp/lecture/2012/prog/p3/kadai3/virtualfunc2.php)
 
 ## References
