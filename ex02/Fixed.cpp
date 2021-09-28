@@ -6,7 +6,7 @@
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/26 22:19:27 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/09/28 19:40:26 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/09/28 20:09:13 by tayamamo         ###   ########.fr       */
 /*   Copyright 2021                                                           */ /* ************************************************************************** */
 
 #include "Fixed.hpp"
@@ -38,12 +38,12 @@ Fixed& Fixed::operator=(Fixed const& rhs) {
     return *this;
 }
 
-bool Fixed::operator>(Fixed const& rhs) { return val_ > rhs.val_; }
-bool Fixed::operator<(Fixed const& rhs) { return val_ < rhs.val_; }
-bool Fixed::operator>=(Fixed const& rhs) { return !(val_ < rhs.val_); }
-bool Fixed::operator<=(Fixed const& rhs) { return !(val_ > rhs.val_); }
-bool Fixed::operator==(Fixed const& rhs) { return val_ == rhs.val_; }
-bool Fixed::operator!=(Fixed const& rhs) { return !(*this == rhs); }
+bool Fixed::operator>(Fixed const& rhs) const { return val_ > rhs.val_; }
+bool Fixed::operator<(Fixed const& rhs) const { return val_ < rhs.val_; }
+bool Fixed::operator>=(Fixed const& rhs) const { return !(val_ < rhs.val_); }
+bool Fixed::operator<=(Fixed const& rhs) const { return !(val_ > rhs.val_); }
+bool Fixed::operator==(Fixed const& rhs) const { return val_ == rhs.val_; }
+bool Fixed::operator!=(Fixed const& rhs) const { return !(*this == rhs); }
 
 Fixed& Fixed::operator++() {
     ++val_;
@@ -78,6 +78,17 @@ float Fixed::toFloat(void) const {
 }
 
 int Fixed::toInt(void) const { return val_ >> NUM_OF_FRACTIONAL_BITS_; }
+
+Fixed& Fixed::min(Fixed& a, Fixed& b) { return a <= b ? a : b; }
+Fixed& Fixed::max(Fixed& a, Fixed& b) { return a >= b ? a : b; }
+
+Fixed const& Fixed::min(Fixed const& a, Fixed const& b) {
+    return a <= b ? a : b;
+}
+
+Fixed const& Fixed::max(Fixed const& a, Fixed const& b) {
+    return a >= b ? a : b;
+}
 
 const Fixed operator+(Fixed const& lhs, Fixed const& rhs) {
     return Fixed(lhs.toFloat() + rhs.toFloat());
