@@ -6,7 +6,7 @@
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/26 22:19:27 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/09/28 18:51:43 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/09/28 19:24:59 by tayamamo         ###   ########.fr       */
 /*   Copyright 2021                                                           */ /* ************************************************************************** */
 
 #include "Fixed.hpp"
@@ -80,29 +80,19 @@ float Fixed::toFloat(void) const {
 int Fixed::toInt(void) const { return val_ >> NUM_OF_FRACTIONAL_BITS_; }
 
 const Fixed operator+(Fixed const& lhs, Fixed const& rhs) {
-    Fixed res = Fixed();
-    res.setRawBits(lhs.getRawBits() + rhs.getRawBits());
-    return res;
+    return Fixed(lhs.toFloat() + rhs.toFloat());
 }
 
 const Fixed operator-(Fixed const& lhs, Fixed const& rhs) {
-    Fixed res = Fixed();
-    res.setRawBits(lhs.getRawBits() - rhs.getRawBits());
-    return res;
+    return Fixed(lhs.toFloat() - rhs.toFloat());
 }
 
 const Fixed operator*(Fixed const& lhs, Fixed const& rhs) {
-    Fixed res = Fixed();
-    res.setRawBits(lhs.getRawBits() *
-                   (rhs.getRawBits() >> rhs.getNumOfFractionalBits()));
-    return res;
+    return Fixed(lhs.toFloat() * rhs.toFloat());
 }
 
 const Fixed operator/(Fixed const& lhs, Fixed const& rhs) {
-    Fixed res = Fixed();
-    res.setRawBits(lhs.getRawBits() / rhs.getRawBits()
-                   << res.getNumOfFractionalBits());
-    return res;
+    return Fixed(lhs.toFloat() / rhs.toFloat());
 }
 
 std::ostream& operator<<(std::ostream& os, Fixed const& fixed) {
